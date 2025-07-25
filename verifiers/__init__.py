@@ -27,12 +27,14 @@ from .rubrics.rubric import Rubric
 from .rubrics.judge_rubric import JudgeRubric
 from .rubrics.rubric_group import RubricGroup
 from .rubrics.tool_rubric import ToolRubric
+from .rubrics.djinn_rubric import DjinnRubric
 
 from .envs.environment import Environment
 from .envs.multiturn_env import MultiTurnEnv
 from .envs.singleturn_env import SingleTurnEnv
 from .envs.tool_env import ToolEnv
 from .envs.env_group import EnvGroup
+from .envs.djinn_env import DjinnEnv
 
 # Conditional import based on trl availability
 try:
@@ -86,11 +88,13 @@ __all__ = [
     "JudgeRubric",
     "RubricGroup",
     "ToolRubric",
+    "DjinnRubric",
     "Environment",
     "MultiTurnEnv",
     "SingleTurnEnv",
     "ToolEnv",
     "EnvGroup",
+    "DjinnEnv",
     "extract_boxed_answer",
     "extract_hash_answer",
     "load_example_dataset",
