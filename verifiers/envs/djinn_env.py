@@ -74,6 +74,11 @@ class DjinnEnv(MultiTurnEnv):
                     if field in row:
                         info_dict[field] = row[field]
                 new_row["info"] = info_dict
+            
+            if "answer" not in dataset.column_names:
+                new_row["answer"] = [
+                    {"role": "assistant", "content": row["insecure_verifier_info"]}
+                ]
             return new_row
         
         # Only map if we need to add columns

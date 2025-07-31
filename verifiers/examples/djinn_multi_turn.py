@@ -190,9 +190,9 @@ def training_example():
         log_completions=True,
         report_to="wandb",
         # VLLM server settings for multi-GPU training
-        # vllm_server_host="0.0.0.0",
-        # vllm_server_port=8000,
-        # async_generation_timeout=1800.0,
+        vllm_server_host="0.0.0.0",
+        vllm_server_port=8000,
+        async_generation_timeout=1800.0,
     )
 
     # Create GRPO trainer with LoRA
